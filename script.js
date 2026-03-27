@@ -4,19 +4,17 @@ const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
 
-// Gabriel Mendonca Machado - Projeto de IA
-
 const perguntas = [
     {
         enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
         alternativas: [
             {
                 texto: "Isso é assustador!",
-                afirmacao: "No início ficou com medo do que essa tecnologia pode fazer. "
+                afirmacao: "Gabriel inicialmente ficou preocupado com os possíveis impactos negativos dessa tecnologia. "
             },
             {
-                texto: "Isso é maravilhoso Rafael!",
-                afirmacao: "Quis saber como usar IA no seu dia a dia."
+                texto: "Isso é maravilhoso!",
+                afirmacao: "Gabriel ficou fascinado e quis explorar todas as possibilidades da IA no seu dia a dia."
             }
         ]
     },
@@ -25,11 +23,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Utiliza uma ferramenta de busca na internet que utiliza IA para que ela ajude a encontrar informações relevantes para o trabalho e explique numa linguagem que facilite o entendimento.",
-                afirmacao: "Conseguiu utilizar a IA para buscar informações úteis."
+                afirmacao: "Gabriel aprendeu a usar a IA como ferramenta de pesquisa, otimizando seu tempo e aprofundando seu conhecimento."
             },
             {
                 texto: "Escreve o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
-                afirmacao: "Sentiu mais facilidade em utilizar seus próprios recursos para escrever seu trabalho."
+                afirmacao: "Gabriel preferiu usar seus próprios recursos e conhecimentos, desenvolvendo suas habilidades de pesquisa e análise crítica."
             }
         ]
     },
@@ -38,11 +36,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Defende a ideia de que a IA pode criar novas oportunidades de emprego e melhorar habilidades humanas.",
-                afirmacao: "Vem impulsionando a inovação na área de IA e luta para abrir novos caminhos profissionais com IA."
+                afirmacao: "Gabriel se tornou um entusiasta da inovação, buscando constantemente novas formas de integrar IA de maneira ética e produtiva."
             },
             {
                 texto: "Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores.",
-                afirmacao: "Sua preocupação com as pessoas motivou a criar um grupo de estudos entre trabalhadores para discutir meios de utilização de IA de forma ética."
+                afirmacao: "Gabriel desenvolveu uma consciência social e criou um grupo de estudos para discutir o uso ético da IA e a proteção dos trabalhadores."
             }
         ]
     },
@@ -50,30 +48,29 @@ const perguntas = [
         enunciado: "Ao final da discussão, você precisou criar uma imagem no computador que representasse o que pensa sobre IA. E agora?",
         alternativas: [
             {
-                texto: "Criar uma imagem utilizando uma plataforma de design como o Paint.",
-                afirmacao: "Notou também que muitas pessoas não sabem ainda utilizar as ferramentas tradicionais e decidiu compartilhar seus conhecimentos de design utilizando ferramentas de pintura digital para iniciantes."
+                texto: "Criar uma imagem utilizando uma plataforma de design tradicional como o Paint ou Photoshop.",
+                afirmacao: "Gabriel compartilhou seus conhecimentos de design digital com iniciantes, mostrando que ferramentas tradicionais ainda têm seu valor."
             },
             {
                 texto: "Criar uma imagem utilizando um gerador de imagem de IA.",
-                afirmacao: "Acelerou o processo de criação de trabalhos utilizando geradores de imagem e agora consegue ensinar pessoas que sentem dificuldades em desenhar manualmente como utilizar também!"
+                afirmacao: "Gabriel dominou as ferramentas de geração de imagem por IA e agora ajuda outras pessoas a expressarem sua criatividade digitalmente."
             }
         ]
     },
     {
-        enunciado: "Você tem um trabalho em grupo de biologia para entregar na semana seguinte, o andamento do trabalho está um pouco atrasado e uma pessoa do seu grupo decidiu fazer com ajuda da IA. O problema é que o trabalho está totalmente igual ao do chat. O que você faz? ",
+        enunciado: "Você tem um trabalho em grupo de biologia para entregar na semana seguinte, o andamento do trabalho está um pouco atrasado e uma pessoa do seu grupo decidiu fazer com ajuda da IA. O problema é que o trabalho está totalmente igual ao do chat. O que você faz?",
         alternativas: [
             {
-                texto: "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
-                afirmacao: "Infelizmente passou a utilizar a IA para fazer todas suas tarefas e agora se sente dependente da IA para tudo."
+                texto: "Aceita usar o texto gerado pela IA como trabalho final, pois foi uma contribuição válida.",
+                afirmacao: "Gabriel aprendeu uma lição importante sobre os limites da IA e agora busca equilíbrio entre tecnologia e desenvolvimento pessoal."
             },
             {
-                texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
-                afirmacao: "Percebeu que toda IA reproduz orientações baseadas na empresa que programou e muito do que o chat escrevia não refletia o que pensava e por isso sabe que os textos gerados pela IA devem servir como auxílio e não resultado final. "
+                texto: "Revisa o trabalho, adiciona perspectivas pessoais e discute com o grupo sobre a importância do pensamento crítico.",
+                afirmacao: "Gabriel se tornou um defensor do uso consciente da IA, sempre revisando e personalizando os resultados gerados pelas máquinas."
             }
         ]
-    },
+    }
 ];
-
 
 let atual = 0;
 let perguntaAtual;
@@ -90,8 +87,8 @@ function mostraPergunta() {
     mostraAlternativas();
 }
 
-function mostraAlternativas(){
-    for(const alternativa of perguntaAtual.alternativas) {
+function mostraAlternativas() {
+    for (const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativas = document.createElement("button");
         botaoAlternativas.textContent = alternativa.texto;
         botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
@@ -107,30 +104,48 @@ function respostaSelecionada(opcaoSelecionada) {
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = "Em 2049...";
-    textoResultado.textContent = historiaFinal + " - Gabriel Mendonca Machado";
+    caixaPerguntas.textContent = "🌟 Em 2049, Gabriel... 🌟";
+    textoResultado.textContent = historiaFinal + "\n\n✨ A jornada de Gabriel mostra que o futuro da IA está nas mãos de quem sabe usá-la com sabedoria, ética e criatividade! ✨";
     caixaAlternativas.textContent = "";
+    
+    // Adiciona um botão para reiniciar o quiz
+    const botaoReiniciar = document.createElement("button");
+    botaoReiniciar.textContent = "🔄 Recomeçar Jornada";
+    botaoReiniciar.style.marginTop = "20px";
+    botaoReiniciar.addEventListener("click", () => {
+        atual = 0;
+        historiaFinal = "";
+        mostraPergunta();
+        caixaResultado.style.display = "none";
+        caixaPerguntas.style.display = "block";
+        caixaAlternativas.style.display = "flex";
+    });
+    caixaAlternativas.appendChild(botaoReiniciar);
+    caixaResultado.style.display = "block";
 }
 
-mostraPergunta();
+// Relógio Digital
 const horas = document.getElementById('horas');
 const minutos = document.getElementById('minutos');
 const segundos = document.getElementById('segundos');
 
-const relogio = setInterval(function time() {
+function atualizarRelogio() {
     let dateToday = new Date();
     let hr = dateToday.getHours();
     let min = dateToday.getMinutes();
     let s = dateToday.getSeconds();
 
-    if (hr < 10) hr = '0' + hr;
-
-    if (min < 10) min = '0' + min;
-
-    if (s < 10) s = '0' + s;
+    hr = hr < 10 ? '0' + hr : hr;
+    min = min < 10 ? '0' + min : min;
+    s = s < 10 ? '0' + s : s;
 
     horas.textContent = hr;
     minutos.textContent = min;
     segundos.textContent = s;
+}
 
-})
+setInterval(atualizarRelogio, 1000);
+atualizarRelogio();
+
+// Iniciar o quiz
+mostraPergunta();
