@@ -1,62 +1,314 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA no Futebol - Inteligência Artificial no Esporte</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="icon.png">
-    <title>Gabriel - O futuro da IA, está em suas mãos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="caixa-principal">
-        <br>
-        <h1>Gabriel<span class="destaque-titulo">InformaticA</span></h1>
-        <br>
-        <h2>Você decide o futuro da IA</h2>
-        <div class="caixa-perguntas"></div>
-        <div class="caixa-alternativas"></div>
-        <div class="caixa-resultado">
-            <p class="texto-resultado"></p>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon">⚽</span>
+                <span class="logo-text">IA Football Tech</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#aplicacoes">Aplicações</a></li>
+                <li><a href="#tecnologia">Tecnologia</a></li>
+                <li><a href="#futuro">Futuro</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="highlight">Inteligência Artificial</span>
+                <br>no Futebol
+            </h1>
+            <p class="hero-subtitle">Descubra como a IA está revolucionando o esporte mais popular do mundo</p>
+            <div class="hero-buttons">
+                <a href="#sobre" class="btn btn-primary">Saiba Mais</a>
+                <a href="#aplicacoes" class="btn btn-secondary">Ver Aplicações</a>
+            </div>
         </div>
-        <br>
-        
-        <div class="relogio">
-            <div>
-                <span id="horas">00</span>
-                <span class="tempo">Horas</span>
-            </div>
-    
-            <div>
-                <span id="minutos">00</span>
-                <span class="tempo">Minutos</span>
-            </div>
-    
-            <div>
-                <span id="segundos">00</span>
-                <span class="tempo">Segundos</span>
+        <div class="scroll-indicator">
+            <span>Role para baixo</span>
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="section sobre-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon">🤖</span>
+                O que é IA no Futebol?
+            </h2>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="about-text">
+                        A Inteligência Artificial está transformando o futebol moderno. Desde a análise de desempenho 
+                        dos jogadores até a previsão de resultados de partidas, a IA se tornou uma ferramenta 
+                        essencial para clubes, técnicos e analistas.
+                    </p>
+                    <p class="about-text">
+                        Através de algoritmos avançados de machine learning e processamento de dados em tempo real, 
+                        é possível extrair insights valiosos que antes eram impossíveis de obter.
+                    </p>
+                    <div class="stats-container">
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="95">0</div>
+                            <div class="stat-label">Dos times usam IA</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="1000000">0</div>
+                            <div class="stat-label">Dados analisados/jogo</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="85">0</div>
+                            <div class="stat-label">% Precisão</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://image.qwenlm.ai/public_source/d478cf04-7548-46d5-a675-f133373d3e1f/6511c35b7-bad3-4ffa-aa06-f9c0cbb428bd3956.png" 
+                         alt="IA no Futebol" 
+                         class="about-img">
+                </div>
             </div>
         </div>
-        <section>
-            <footer>
-                <a href="https://github.com/professor-rafael" target="_blank" rel="noopener noreferrer">
-                    <img src="github.png" alt="GitHub">
-                    <p>Github</p>
-                </a>
-                <a href="https://www.youtube.com/channel/UCBRq6fO_-P6yPOVbC0yZVmQ" target="_blank" rel="noopener noreferrer">
-                    <img src="youtube.png" alt="YouTube">
-                    <p>Youtube</p>
-                </a>
-                <a href="https://api.whatsapp.com/send?phone=5543996561825" target="_blank" rel="noopener noreferrer">
-                    <img src="Whatsapp.png" alt="WhatsApp">
-                    <p>Whatsapp</p>
-                </a>
-                <a href="https://www.deepseek.com/" target="_blank" rel="noopener noreferrer">
-                    <img src="deepseek-color.png" alt="Deepseek">
-                    <p>Deepseek</p>
-                </a>
-            </footer>
-        </section>
-    </div>
+    </section>
+
+    <!-- Aplicações Section -->
+    <section id="aplicacoes" class="section aplicacoes-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon">⚽</span>
+                Aplicações da IA
+            </h2>
+            <div class="applications-grid">
+                <div class="app-card">
+                    <div class="app-icon">📊</div>
+                    <h3>Análise de Desempenho</h3>
+                    <p>Monitoramento em tempo real do desempenho dos jogadores com métricas avançadas de velocidade, distância percorrida e posicionamento tático.</p>
+                    <img src="https://image.qwenlm.ai/public_source/d478cf04-7548-46d5-a675-f133373d3e1f/4511c35b7-bad3-4ffa-aa06-f9c0cbb428bd1152.png" alt="Análise de Desempenho" class="app-image">
+                </div>
+                <div class="app-card">
+                    <div class="app-icon">🎯</div>
+                    <h3>Scouting de Jogadores</h3>
+                    <p>Identificação de talentos e análise de compatibilidade de jogadores usando algoritmos de machine learning para encontrar o atleta ideal.</p>
+                    <img src="https://image.qwenlm.ai/public_source/d478cf04-7548-46d5-a675-f133373d3e1f/0511c35b7-bad3-4ffa-aa06-f9c0cbb428bd5418.png" alt="Scouting" class="app-image">
+                </div>
+                <div class="app-card">
+                    <div class="app-icon">🧠</div>
+                    <h3>Estratégia Tática</h3>
+                    <p>Análise de padrões de jogo adversários e desenvolvimento de estratégias personalizadas baseadas em dados históricos e em tempo real.</p>
+                    <img src="https://image.qwenlm.ai/public_source/d478cf04-7548-46d5-a675-f133373d3e1f/2511c35b7-bad3-4ffa-aa06-f9c0cbb428bd6623.png" alt="Estratégia" class="app-image">
+                </div>
+                <div class="app-card">
+                    <div class="app-icon">🏥</div>
+                    <h3>Prevenção de Lesões</h3>
+                    <p>Monitoramento biométrico e predição de riscos de lesões através de análise de dados fisiológicos e padrões de movimento.</p>
+                    <img src="https://image.qwenlm.ai/public_source/d478cf04-7548-46d5-a675-f133373d3e1f/3511c35b7-bad3-4ffa-aa06-f9c0cbb428bd3972.png" alt="Prevenção" class="app-image">
+                </div>
+                <div class="app-card">
+                    <div class="app-icon">🎬</div>
+                    <h3>VAR e Arbitragem</h3>
+                    <p>Sistemas de visão computacional para auxiliar árbitros em decisões cruciais, melhorando a precisão e justiça do jogo.</p>
+                    <img src="https://image.qwenlm.ai/public_source/d478cf04-7548-46d5-a675-f133373d3e1f/1511c35b7-bad3-4ffa-aa06-f9c0cbb428bd1294.png" alt="VAR" class="app-image">
+                </div>
+                <div class="app-card">
+                    <div class="app-icon">🤖</div>
+                    <h3>Robôs Futebolistas</h3>
+                    <p>Desenvolvimento de robôs autônomos que jogam futebol, testando limites da IA em tomada de decisão e coordenação motora.</p>
+                    <img src="https://image.qwenlm.ai/public_source/d478cf04-7548-46d5-a675-f133373d3e1f/4511c35b7-bad3-4ffa-aa06-f9c0cbb428bd7639.png" alt="Robôs" class="app-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tecnologia Section -->
+    <section id="tecnologia" class="section tecnologia-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon">💻</span>
+                Tecnologias Utilizadas
+            </h2>
+            <div class="tech-container">
+                <div class="tech-image">
+                    <img src="https://image.qwenlm.ai/public_source/d478cf04-7548-46d5-a675-f133373d3e1f/8511c35b7-bad3-4ffa-aa06-f9c0cbb428bd9529.png" 
+                         alt="Estádio Tecnológico" 
+                         class="tech-main-img">
+                </div>
+                <div class="tech-list">
+                    <div class="tech-item">
+                        <div class="tech-icon"></div>
+                        <div class="tech-info">
+                            <h4>Machine Learning</h4>
+                            <p>Algoritmos que aprendem com dados históricos para prever resultados e otimizar estratégias.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">👁️</div>
+                        <div class="tech-info">
+                            <h4>Visão Computacional</h4>
+                            <p>Análise de imagens e vídeos para rastreamento de jogadores e bola em tempo real.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📡</div>
+                        <div class="tech-info">
+                            <h4>IoT e Sensores</h4>
+                            <p>Dispositivos vestíveis que coletam dados biométricos e de desempenho dos atletas.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">☁️</div>
+                        <div class="tech-info">
+                            <h4>Big Data & Cloud</h4>
+                            <p>Processamento de milhões de dados em nuvem para análises complexas e instantâneas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Futuro Section -->
+    <section id="futuro" class="section futuro-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon">🚀</span>
+                O Futuro do Futebol com IA
+            </h2>
+            <div class="future-grid">
+                <div class="future-card">
+                    <img src="https://image.qwenlm.ai/public_source/d478cf04-7548-46d5-a675-f133373d3e1f/8511c35b7-bad3-4ffa-aa06-f9c0cbb428bd1887.png" 
+                         alt="Estádio do Futuro" 
+                         class="future-img">
+                    <div class="future-content">
+                        <h3>Estádios Inteligentes</h3>
+                        <p>Estádios equipados com IA para melhorar a experiência dos fãs, segurança e eficiência operacional.</p>
+                    </div>
+                </div>
+                <div class="future-card">
+                    <img src="https://image.qwenlm.ai/public_source/d478cf04-7548-46d5-a675-f133373d3e1f/1511c35b7-bad3-4ffa-aa06-f9c0cbb428bd9834.png" 
+                         alt="Robôs Avançados" 
+                         class="future-img">
+                    <div class="future-content">
+                        <h3>Robôs Humanoides</h3>
+                        <p>Robôs cada vez mais avançados capazes de competir em níveis impressionantes, testando os limites da IA.</p>
+                    </div>
+                </div>
+                <div class="future-card">
+                    <img src="https://image.qwenlm.ai/public_source/d478cf04-7548-46d5-a675-f133373d3e1f/0511c35b7-bad3-4ffa-aa06-f9c0cbb428bd7448.png" 
+                         alt="Treinamento Avançado" 
+                         class="future-img">
+                    <div class="future-content">
+                        <h3>Treinamento Personalizado</h3>
+                        <p>Programas de treinamento adaptativos baseados em IA que se ajustam às necessidades específicas de cada jogador.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="section contato-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon">📧</span>
+                Entre em Contato
+            </h2>
+            <div class="contact-container">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Seu Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Sua Mensagem" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        Enviar Mensagem
+                    </button>
+                </form>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <span class="info-icon">📍</span>
+                        <div>
+                            <h4>Endereço</h4>
+                            <p>Rua do Futebol, 100 - São Paulo, SP</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">📞</span>
+                        <div>
+                            <h4>Telefone</h4>
+                            <p>+55 (11) 1234-5678</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">✉️</span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contato@iafootballtech.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>IA Football Tech</h3>
+                    <p>Revolucionando o futebol através da inteligência artificial e inovação tecnológica.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#aplicacoes">Aplicações</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 IA Football Tech. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
